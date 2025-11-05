@@ -38,16 +38,24 @@ Objectives
 -Evaluate with R², MAE, MSE
 -Save best model for future deployment
 
-Models Trained
-| Model                   | R² Score       | MAE        | Notes                       |
-| ----------------------- | -------------- | ---------- | --------------------------- |
-| Linear Regression       | ~0.26          | ~48        | Baseline                    |
-| Decision Tree Regressor | Higher than LR | Lower MAE  | Captured nonlinear patterns |
-| Random Forest Regressor | 🏆 Best        | Lowest MAE | Chosen as final model       |
+### 📊 Week 2 Results
 
-Output
--Best model saved as model.pkl using joblib
+| Model | R² Score | MAE | MSE |
+|:------|:---------:|:----:|:----:|
+| Linear Regression | 0.263 | 48.18 | 7737.37 |
+| Decision Tree Regressor | **0.538** | **35.63** | **4856.47** |
+| Random Forest Regressor | 0.459 | 34.95 | 5686.60 |
+
+**Analysis:**
+- Decision Tree achieved the highest R² score (~0.54), indicating better explanatory power.  
+- Random Forest achieved the lowest MAE (~34.95), meaning lower prediction error on average.  
+- Linear Regression served as a baseline and performed less effectively.  
+
+**Selected Model:** ✅ Random Forest Regressor (balanced performance & robustness)  
+Saved as `model.pkl` for use in the Streamlit app (Week 3).
+
 
 ## 🚀 Next Steps
 - Week 3: Create Streamlit Web App with Chatbot
+
 
